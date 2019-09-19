@@ -1,9 +1,7 @@
-# Touch bar Electron Taco Nyan
+# Touch bar Electron Cuack
 
-run Taco Nyan:
+run Cuack:
 ```bash
 npm install
 npm start
 ```
-
- ![](https://raw.github.com/cmedinilla/touchbar-electron-taconyan/master/images/demo.gif)
