@@ -19,13 +19,8 @@ const duckTouchBarButton =  new TouchBarButton ({
   click: musicPlayer,
 })
 
-const touchBarLabel = new TouchBarLabel({
-  label: '                 ',
-  backgroundColor: '#000000',
-})
-
 const touchBar = new TouchBar({
-  items: [touchBarLabel, duckTouchBarButton],
+  items: [duckTouchBarButton],
 })
 
 let frame = 0;
