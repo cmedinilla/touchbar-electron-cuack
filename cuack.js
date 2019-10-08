@@ -6,7 +6,7 @@ const {TouchBarLabel, TouchBarButton} = TouchBar
 let window
 
 function musicPlayer() {
-  return player.play('sounds/duck-game-quack-sound.mp3', {afplay: ['-v', 1 ]}, function(err){
+  return player.play('sounds/quack.mp3', {afplay: ['-v', 1 ]}, function(err){
     if (err) throw err
   })
 }
