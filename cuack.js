@@ -11,6 +11,12 @@ function musicPlayer() {
   })
 }
 
+function musicPlayeronFire() {
+  return player.play('sounds/quackYell02.mp3', {afplay: ['-v', 1 ]}, function(err){
+    if (err) throw err
+  })
+}
+
 
 const duckTouchBarButton =  new TouchBarButton ({
   label:'',
@@ -19,8 +25,15 @@ const duckTouchBarButton =  new TouchBarButton ({
   click: musicPlayer,
 })
 
+const duckOnFireTouchBarButton =  new TouchBarButton ({
+  label:'',
+  backgroundColor: '#6aacbd',
+  icon: 'images/duck/duck1.png',
+  click: musicPlayeronFire,
+})
+
 const touchBar = new TouchBar({
-  items: [duckTouchBarButton],
+  items: [duckTouchBarButton,duckOnFireTouchBarButton],
 })
 
 let frame = 0;
@@ -32,7 +45,7 @@ const updateFrames = () => {
     frame += 1;
   }
   const duckPath = `images/duck/duck${frame}.png`;
-  duckTouchBarButton.icon = duckPath;
+  duckTouchBarButton.icon = duckOnFireTouchBarButton.icon = duckPath;
 }
 
 const animateFrames = () => {
